@@ -1,7 +1,6 @@
 <script>
   import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte'
   import PostsList from '$lib/components/PostsList.svelte'
-  import SocialLinks from '$lib/components/SocialLinks.svelte'
   import { name } from '$lib/info.js'
 
   /** @type {import('./$types').PageData} */
@@ -19,7 +18,7 @@
       <h2 class="text-sm font-medium sm:text-base text-zinc-500 dark:text-zinc-400">
         Recently Published
       </h2>
-      <a href="/posts" class="flex items-center gap-1 text-sm font-medium text-teal-500"
+      <a href="/blogs" class="flex items-center gap-1 text-sm font-medium text-teal-500"
         >View All <ArrowRightIcon class="w-4 h-4" /></a
       >
     </div>
