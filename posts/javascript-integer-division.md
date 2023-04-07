@@ -1,6 +1,6 @@
 ---
 title: Gotchas in Integer Division in JavaScript
-date: 2022-04-04
+date: 2023-04-04
 ---
 
 JavaScript is a very flexible and powerful language, but it also has some quirks that can cause confusion and frustration. One of these quirks is how it handles integer division, or dividing two numbers and getting a whole number as a result.
@@ -20,7 +20,7 @@ This can be problematic if you want to perform integer division, or get the quot
 
 ## Using Math.floor
 
-One way to perform integer division in JavaScript is to use the Math.floor method. This method rounds down a given number to the nearest integer, so if we pass a floating-point number to it, it will return the integer that is less than or equal to that number¹². For example:
+One way to perform integer division in JavaScript is to use the Math.floor method. This method rounds down a given number to the nearest integer, so if we pass a floating-point number to it, it will return the integer that is less than or equal to that number. For example:
 
 ```javascript
 var x = Math.floor(10 / 2) // x is 5
@@ -36,13 +36,13 @@ var x = Math.floor(-9 / 2) // x is -5
 
 Wait a minute, that's not right! We would expect to get -4 as an answer, since -4 \* 2 = -8 and -8 + 1 = -9. But Math.floor always rounds down, so it returns -5 instead.
 
-This is because Math.floor follows the mathematical definition of floor, which is the largest integer less than or equal to a given value³. In mathematics, the floor of -4.5 is -5, as -5 is the "highest possible integral number that is still lower than -4.5"⁴.
+This is because Math.floor follows the mathematical definition of floor, which is the largest integer less than or equal to a given value. In mathematics, the floor of -4.5 is -5, as -5 is the "highest possible integral number that is still lower than -4.5.
 
 But this is not what we want when we perform integer division. We want to get the closest integer to the quotient of two numbers, regardless of their sign. We want to truncate the decimal part of the quotient, not round it down.
 
 ## Using Math.trunc
 
-Fortunately, there is a better way to perform integer division in JavaScript: using the Math.trunc method. This method returns the integral part of a given number, or simply removes the decimal part without rounding⁵. For example:
+Fortunately, there is a better way to perform integer division in JavaScript: using the Math.trunc method. This method returns the integral part of a given number, or simply removes the decimal part without rounding. For example:
 
 ```javascript
 var x = Math.trunc(10 / 2) // x is 5
@@ -60,5 +60,3 @@ function trunc(x) {
   return x < 0 ? Math.ceil(x) : Math.floor(x)
 }
 ```
-
-This function uses Math.ceil for negative numbers and Math.floor for positive numbers, which effectively removes the decimal part of any number.
