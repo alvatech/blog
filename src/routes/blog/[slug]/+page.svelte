@@ -120,4 +120,5 @@
       grid-template-columns: 1fr 42rem 1fr;
     }
   }
+
 </style>

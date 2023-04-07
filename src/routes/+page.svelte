@@ -16,7 +16,7 @@
   <section class="w-full">
     <PostsList posts={data.posts} />
     <div class="flex items-center justify-between gap-4 mb-8 mt-4 sm:mt-8">
-      <a href="/blogs" class="flex items-center gap-1 text-sm font-medium text-teal-500"
+      <a href="/blogs" class="flex items-center gap-1 text-sm font-medium text-rose-500"
         >View All <ArrowRightIcon class="w-4 h-4" /></a
       >
     </div>
